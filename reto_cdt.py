@@ -1,4 +1,4 @@
-def CDT(usuario, capital, tiempo):
+def CDT(usuario:str, capital:int, tiempo:int):
     
     cant = capital
     pi = 0.03
@@ -9,10 +9,14 @@ def CDT(usuario, capital, tiempo):
 
     if tiempo > 2:
         vt= vi + cant
-        print("Para el usuario " + str(usuario) + " La cantidad de dinero a recibir, segun el monto inicial " + str(cant) + " para un tiempo de " + str(tiempo) + " meses es: " + str(vt))
+        #result= print("Para el usuario " + str(usuario) + " La cantidad de dinero a recibir, segun el monto inicial " + str(cant) + " para un tiempo de " + str(tiempo) + " meses es: " + str(vt))
     else:
         vt= cant - vp
-        print("Para el usuario " + str(usuario) + " La cantidad de dinero a recibir, segun el monto inicial " + str(cant) + " para un tiempo de " + str(tiempo) + " meses es: " + str(vt))
+        #result=print("Para el usuario " + str(usuario) + " La cantidad de dinero a recibir, segun el monto inicial " + str(cant) + " para un tiempo de " + str(tiempo) + " meses es: " + str(vt))
+
+    result="Para el usuario {} La cantidad de dinero a recibir, segun el monto incial {} para un tiempo de {} meses es: {}".format(usuario,cant,tiempo,vt)
+    return result
+
 
 def run():
     
@@ -23,7 +27,8 @@ def run():
     c=int(input("Monto o capital:  "))
     t=int(input("Tiempo del CDT transcurrido en meses:  "))
 
-    CDT(u,c,t)
+    print(CDT(u,c,t))
+
 
 if __name__ == '__main__':
     run()

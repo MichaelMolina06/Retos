@@ -21,7 +21,7 @@ def cliente(informacion: dict)-> dict:
     
     if informacion['edad'] >= int(15) and informacion['edad'] <= int(18):
         total_boleta = carrosChocones - (carrosChocones*7)/100
-        nuevoDic.update({'atraccion':'Carroschocones'})
+        nuevoDic.update({'atraccion':'Carros chocones'})
         nuevoDic.update({'apto':True})
         if informacion['primer_ingreso'] == bool(True): 
             nuevoDic.update({'total_boleta':total_boleta})
@@ -37,7 +37,7 @@ def cliente(informacion: dict)-> dict:
             else:
                 nuevoDic.update({'total_boleta':sillasVoladoras}) 
         else:
-            if informacion['edad'] >= int(18): 
+            if informacion['edad'] > int(18): 
                 total_boleta = xTreme - (xTreme*5)/100
                 nuevoDic.update({'atraccion':'X-Treme'})
                 nuevoDic.update({'apto':True})

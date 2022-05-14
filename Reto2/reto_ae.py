@@ -20,10 +20,10 @@ def cliente(informacion: dict) -> dict:
 
     if primera_vez == True and apto == True:
         if edad >= 7 and edad < 15:
-            atraccion= 'Sillas Voladoras'
+            atraccion= 'Sillas voladoras'
             valor_entrada= 10000 - (10000*0.05)
         elif edad >= 15 and edad <= 18:
-            atraccion= 'Carros Chocones'
+            atraccion= 'Carroschocones'
             valor_entrada= 5000 - (5000*0.07)
         elif edad > 18:
             atraccion= 'X-Treme'
@@ -31,10 +31,10 @@ def cliente(informacion: dict) -> dict:
 
     if primera_vez == False and apto == True:
         if edad >= 7 and edad < 15:
-            atraccion= 'Sillas Voladoras'
+            atraccion= 'Sillas voladoras'
             valor_entrada= 10000
         elif edad >= 15 and edad <= 18:
-            atraccion= 'Carros Chocones'
+            atraccion= 'Carroschocones'
             valor_entrada= 5000
         elif edad > 18:
             atraccion= 'X-Treme'
@@ -42,7 +42,7 @@ def cliente(informacion: dict) -> dict:
     
     database = {
         'nombre': str(informacion['nombre']),
-        'edad': str(informacion['edad']),
+        'edad': int(informacion['edad']),
         'atraccion': str(atraccion),
         'apto': bool(apto),
         'primer_ingreso': bool(informacion['primer_ingreso']),
@@ -53,9 +53,9 @@ def cliente(informacion: dict) -> dict:
 
 def run():
     informacion = {
-    'id_cliente': 1,
+    'id_cliente': 4,
     'nombre': 'Johana Fernandez',
-    'edad': 20,
+    'edad': 8,
     'primer_ingreso': False
     }
 

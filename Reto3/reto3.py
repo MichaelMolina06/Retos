@@ -1,6 +1,5 @@
 def AutoPartes(ventas: list):
     lista = list(ventas) 
-    #print(ventas)
     return lista
 
 def consultaRegistro(ventas, idproducto):

@@ -6,4 +6,3 @@ import Autopartes
  (3578,'tijera', 'QW8523',1,128,'Pedro Faria',1456,'12/06/2020'),
  (9251,'piñón', 'EN5698',2,8,'Juan Peña',565,'12/06/2020')]),2010))
 print()
-

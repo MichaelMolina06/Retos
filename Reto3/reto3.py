@@ -1,7 +1,6 @@
 def AutoPartes(ventas: list):
     lista = list(ventas) 
     return lista
-
 def consultaRegistro(ventas, idproducto):
     contador = 0
     for x in ventas:
@@ -12,7 +11,6 @@ def consultaRegistro(ventas, idproducto):
     if contador == 0:
         print("No hay registro de venta de ese producto") 
     return ""
-
 consultaRegistro(AutoPartes([
     (2001,'rosca', 'PT29872',2,45,'Luis Molero',3456,'12/06/2020'),
     (2010,'bujía', 'MS9512',4,15,'Carlos Rondon',1256,'12/06/2020'),

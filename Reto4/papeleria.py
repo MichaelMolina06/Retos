@@ -1,23 +1,35 @@
 from functools import reduce
 
+def acumular(x,y):
+    valor = x + y
+    return valor    
 def comparar(total):
+    ajuste = 0
     if total < 600000:
-        ajuste = total + 25000.00
+        ajuste = total + 25000
     else:
-        ajuste = total
+        return total
     return ajuste
     
 def ordenes(rutinaContable:list):
-    print('------------------------ Inicio Registro diario ---------------------------------')
+    #print('------------------------ Inicio Registro diario ---------------------------------')
+    valores = []
     for x in rutinaContable:
-        Total = 0
+        Total = []
         To = lambda x,y: x*y
         for y in x:
             if isinstance(y, tuple) == True:
-                Total = Total + To(y[1],y[2])
-        Total = comparar(Total)
-        print('La factura {} tiene un total en pesos de {}'.format(x[0],'{:,.2f}'.format(Total)))
-    print('-------------------------- Fin Registro diario ----------------------------------')
+                #print(To(y[1],y[2]))
+                Total.append(To(y[1],y[2]))
+                #Total = Total + To(y[1],y[2])
+            
+        valores.append(reduce(acumular, Total))
+    #print(valores)
+    print(list(map(comparar,valores)))
+        #print(map(comparar,sum(Total)))
+        #Total = comparar(Total)
+        #print('La factura {} tiene un total en pesos de {}'.format(x[0],'{:,.2f}'.format(Total)))
+    #print('-------------------------- Fin Registro diario ----------------------------------')
     pass
 
 

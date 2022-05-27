@@ -1,28 +1,34 @@
-[### Venta de Autopartes
+### Contador
 
 Problema
 -------------
-Una venta de autopartes necesita de forma urgente un registro de partes vendidas a diferentes compradores, motivo por el cual, se hace necesario en el futuro inmediato registrar dichas ventas y que las mismas puedan ser consultadas por un tipo particular de producto, para ello, la informacion introducida debe ser la siguiente:
 
-**Entradas: Listas de tuplas**
+Un contador necesita llevar una bitácora acerca de los registros diarios de una papelería, en consecuencia,
+esta información que necesita automatizar es la siguientes:
 
-![](https://i.imgur.com/3GBLvBh.png)
+**Entrada:**
 
-**Salida: Diccionario con lista de tuplas**
+![](https://i.imgur.com/GKAUkPc.png)
 
-![](https://i.imgur.com/uNOWYid.png)
+**Salida:**
+
+![](https://i.imgur.com/pHLnfE8.png)
 
 Reto
 -------------
-**Requerimiento.** Para el desarrollo de esta implementacion, el programador debe permitir introducir un registro de ventas desde una **lista de tuplas** como parametro de *AutoPartes* y convertirlo luego en un ***diccionario con lista de tuplas***.
+Para el desarrollo de esta implementación, el programador debe permitir introducir un registro de ordenes desde una lista de tuplas y a través de la función ***map***, ***reduce*** y ***lambda*** desarrollar las funciones necesarias para el siguiente calculo:
 
-Asimismo, se debe permitir desde la funcion *consultaRegistro* quien llama a un nuevo desde la funcion *Autopartes*, manejar la entrada de un parametro tipo *idProducto* para ubicar informacion especifica acerca del producto en informacion general que incluye la fecha de venta.
+- Sumar el total de cada tupla de cada lista
+- Sumar los totales de todas las tuplas de toda la lista
+- Suma el incremento si la compra no llega a un mínima de 600.000 pesos, en este caso, se incrementa 25.000 pesos al total de la compra.
+
+Recuerde, que la salida no debe tener más de dos decimales.
 
 **Esqueleto:**
 
-![](https://i.imgur.com/Ti1xXlD.png)
+![](https://i.imgur.com/BoLNd8q.png)
 
 **Ejemplo:**
 
-![](https://i.imgur.com/gjsYhIs.png)
-](https://i.imgur.com/xtYYsq2.png)
+![](https://i.imgur.com/VntzfVG.png)
+![](https://i.imgur.com/xtYYsq2.png)

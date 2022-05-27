@@ -1,4 +1,4 @@
-### Venta de Autopartes
+[### Venta de Autopartes
 
 Problema
 -------------
@@ -25,3 +25,4 @@ Asimismo, se debe permitir desde la funcion *consultaRegistro* quien llama a un 
 **Ejemplo:**
 
 ![](https://i.imgur.com/gjsYhIs.png)
+](https://i.imgur.com/xtYYsq2.png)

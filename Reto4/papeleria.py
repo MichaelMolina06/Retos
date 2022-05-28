@@ -12,7 +12,7 @@ def comparar(total):
     return ajuste
     
 def ordenes(rutinaContable:list):
-    #print('------------------------ Inicio Registro diario ---------------------------------')
+    print('------------------------ Inicio Registro diario ---------------------------------')
     valores = []
     for x in rutinaContable:
         Total = []
@@ -25,11 +25,11 @@ def ordenes(rutinaContable:list):
             
         valores.append(reduce(acumular, Total))
     #print(valores)
-    print(list(map(comparar,valores)))
+    #print(list(map(comparar,valores)))
         #print(map(comparar,sum(Total)))
         #Total = comparar(Total)
-        #print('La factura {} tiene un total en pesos de {}'.format(x[0],'{:,.2f}'.format(Total)))
-    #print('-------------------------- Fin Registro diario ----------------------------------')
+        print('La factura {} tiene un total en pesos de {}'.format(x[0],'{:,.2f}'.format(Total)))
+        print('-------------------------- Fin Registro diario ----------------------------------')
     pass
 
 

@@ -6,7 +6,7 @@ def listaPeliculas(rutaFileCsv: str):
             dataFrame = pd.read_csv(rutaFileCsv)
             dataFrame2 = dataFrame[["Country","Language","Gross Earnings"]]
             pivot = pd.pivot_table(dataFrame2,index=['Country', 'Language'], values=['Gross Earnings'])
-            filtro = pivot.sample(n=10, replace=False)
+            filtro = pivot.head(n=10)
         except:
             print("Error al leer el archivo de datos.")
     else: print("Extensión inválida.")

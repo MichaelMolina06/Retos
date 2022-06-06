@@ -2,7 +2,7 @@ import pandas as pd
 
 rutaFileCsv="https://github.com/luisguillermomolero/MisionTIC2022_2/blob/master/Modulo1_Python_MisionTIC2022_Main/Semana_5/Reto/movies.csv?raw=true"
 
-def listaPeliculas(rutaFileCsv: str):
+def listaPeliculas(rutaFileCsv: str) -> str:
     if '.csv' in rutaFileCsv or '.CSV' in rutaFileCsv:
         try:
             dataFrame = pd.read_csv(rutaFileCsv)
@@ -13,9 +13,3 @@ def listaPeliculas(rutaFileCsv: str):
             print("Error al leer el archivo de datos.")
     else: print("Extensión inválida.")
     return filtro
-
-def run ():
-    pass
-
-if __name__ == '__main__':
-    run()
